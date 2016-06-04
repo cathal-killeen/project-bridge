@@ -4,7 +4,13 @@
         </button>
     </ion-nav-buttons>
     <ion-content class="padding">
+        <div class="item item-image">
+            <img ng-src="/img/posts/{{post.id}}.jpg">
+        </div>
         <h1>{{content.title}}</h1>
+        <p>{{post.offered_by}}</p>
+        <p><i class="icon ion-ios-location"></i> {{post.location}}</p>
+        <hr>
         <p>
             {{content.description}}
         </p>

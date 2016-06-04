@@ -29,7 +29,17 @@ angular.module('starter.controllers', [])
 
 .controller('HomeCtrl', function($scope, $stateParams) {
 })
-.controller('DiscoverCtrl', function($scope, $stateParams) {
+.controller('DiscoverCtrl', function($scope, $stateParams, Posts, $location, $state) {
+    var posts = Posts.all();
+    posts.forEach(function(post) {
+        post.selected = post.content.EN;
+    });
+
+    $scope.posts = posts;
+
+    $scope.expandPost = function(id){
+        $state.go("tab.discover-detail", {'postId': id});
+    }
 })
 .controller('CreateCtrl', function($scope, $stateParams) {
 })
@@ -38,7 +48,7 @@ angular.module('starter.controllers', [])
 .controller('PostDetailCtrl', function($scope, $stateParams, Posts, $ionicPopover) {
     var post = Posts.get($stateParams.postId);
     $scope.content = post.content.EN;
-
+    $scope.post = post;
     $scope.selected = 'EN';
 
     $scope.langs = Posts.languages($stateParams.postId);
