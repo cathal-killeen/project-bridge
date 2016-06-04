@@ -1,1 +1,7 @@
 /* Empty. Add your own CSS if you like */
+
+
+.custom-dark{
+    color : #30393A !important; // text
+    background-color:blue!important; // for bg color
+ }

@@ -122,3 +122,9 @@ angular.module('starter.controllers', [])
 
     $scope.categories = Posts.getCategoryNames();
 })
+
+.controller('LoginCtrl', function($scope, $stateParams, Posts, $location, $state) {
+    $scope.login = function(){
+        $state.go('tab.home');
+    }
+})
