@@ -3,9 +3,9 @@
         <div class="list">
             <div class="item item-input-inset">
                 <label class="item-input-wrapper">
-                    <input type="text" placeholder="Search">
+                    <input type="text" placeholder="Search" ng-model="query">
                 </label>
-                <button class="button button-small icon ion-search">
+                <button class="button button-small icon ion-search" ng-click="search(query)">
                 </button>
             </div>
         </div>
@@ -16,9 +16,7 @@
                     Choose category
                 </div>
                 <select>
-                    <option>Blue</option>
-                    <option selected>Green</option>
-                    <option>Red</option>
+                    <option ng-repeat="category in categories">{{category}}</options>
                 </select>
             </label>
         </div>

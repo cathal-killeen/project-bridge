@@ -58,6 +58,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+  .state('tab.home-search-detail', {
+    url: '/home/search/:query/:postId',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/post-detail.html',
+        controller: 'PostDetailCtrl'
+      }
+    }
+  })
+
 
   .state('tab.discover', {
       url: '/discover',
@@ -110,4 +120,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/home');
 
-});
+})
+
+.filter('advancedFilter', ['$filter', function($filter){
+    return function(data, text){
+        var textArr = text.split(' ');
+        angular.forEach(textArr, function(test){
+            if(test){
+                  data = $filter('filter')(data, test);
+            }
+        });
+        return data;
+    }
+}]);

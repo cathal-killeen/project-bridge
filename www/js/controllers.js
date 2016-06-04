@@ -43,8 +43,15 @@ angular.module('starter.controllers', [])
 
     $scope.posts = posts;
 
-    $scope.expandPost = function(id){
-        $state.go("tab.discover-detail", {'postId': id});
+    $scope.categories = Posts.getCategoryNames();
+
+    $scope.query = "";
+
+    $scope.search = function(qry){
+        console.log($scope.query);
+        if(qry != ""){
+            $state.go("tab.home-search", {'query': qry});
+        }
     }
 })
 .controller('CreateCtrl', function($scope, $stateParams) {
@@ -99,4 +106,19 @@ angular.module('starter.controllers', [])
     $scope.expandPost = function(id){
         $state.go("tab.discover-post-detail", {'postId': id, 'category': $scope.category});
     }
-});
+})
+.controller('SearchCtrl', function($scope, $stateParams, Posts, $location, $state) {
+    var posts = Posts.all();
+    $scope.query = $stateParams.query;
+    posts.forEach(function(post) {
+        post.selected = post.content.EN;
+    });
+
+    $scope.posts = posts;
+
+    $scope.expandPost = function(id){
+        $state.go("tab.home-search-detail", {'query': $scope.query, 'postId': id});
+    }
+
+    $scope.categories = Posts.getCategoryNames();
+})
