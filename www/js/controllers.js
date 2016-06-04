@@ -34,4 +34,8 @@ angular.module('starter.controllers', [])
 .controller('CreateCtrl', function($scope, $stateParams) {
 })
 .controller('SettingsCtrl', function($scope, $stateParams) {
+})
+.controller('PostDetailCtrl', function($scope, $stateParams, Posts) {
+    var post = Posts.get($stateParams.postId);
+    $scope.content = post.EN;
 });
