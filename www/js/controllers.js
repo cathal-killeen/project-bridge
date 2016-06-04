@@ -27,12 +27,15 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('HomeCtrl', function($scope, $stateParams, Posts) {
+.controller('DiscoverCtrl', function($scope, $stateParams, Posts, $state) {
     $scope.categories = Posts.getCategoryNames();
     $scope.posts = Posts.getPostsByCategory();
+    $scope.expandCategory = function(category){
+        $state.go("tab.discover-detail", {'category': category});
+    }
 
 })
-.controller('DiscoverCtrl', function($scope, $stateParams, Posts, $location, $state) {
+.controller('HomeCtrl', function($scope, $stateParams, Posts, $location, $state) {
     var posts = Posts.all();
     posts.forEach(function(post) {
         post.selected = post.content.EN;
@@ -55,8 +58,6 @@ angular.module('starter.controllers', [])
     $scope.selected = 'EN';
 
     $scope.langs = Posts.languages($stateParams.postId);
-
-    console.log($scope.langs);
 
     $scope.setLang = function(newLang) {
         $scope.selected = newLang;
@@ -88,4 +89,14 @@ angular.module('starter.controllers', [])
     $scope.$on('popover.removed', function() {
         // Execute action
     });
+})
+.controller('CategoryDetailCtrl', function($scope, $stateParams, Posts, $ionicPopover, $state) {
+    var posts = Posts.categoryPosts($stateParams.category);
+    $scope.posts = posts;
+
+    $scope.category = $stateParams.category;
+
+    $scope.expandPost = function(id){
+        $state.go("tab.discover-post-detail", {'postId': id, 'category': $scope.category});
+    }
 });

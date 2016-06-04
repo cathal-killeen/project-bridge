@@ -60,7 +60,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
     .state('tab.discover-detail', {
-      url: '/discover/:postId',
+      url: '/discover/:category',
+      views: {
+        'tab-discover': {
+          templateUrl: 'templates/category-detail.html',
+          controller: 'CategoryDetailCtrl'
+        }
+      }
+    })
+    .state('tab.discover-post-detail', {
+      url: '/discover/:category/:postId',
       views: {
         'tab-discover': {
           templateUrl: 'templates/post-detail.html',
