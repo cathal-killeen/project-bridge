@@ -25,4 +25,13 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+})
+
+.controller('HomeCtrl', function($scope, $stateParams) {
+})
+.controller('DiscoverCtrl', function($scope, $stateParams) {
+})
+.controller('CreateCtrl', function($scope, $stateParams) {
+})
+.controller('SettingsCtrl', function($scope, $stateParams) {
 });
