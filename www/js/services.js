@@ -17,8 +17,9 @@ angular.module('starter.services', [])
                 description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
             }
         },
-        offered_by: "Dublin Sailing Club",
-        location: "Dublin"
+        offered_by: "Berlin Sailing Club",
+        location: "Berlin",
+        category: "Activities"
     },
     {
         id: 3,
@@ -37,7 +38,49 @@ angular.module('starter.services', [])
             }
         },
         offered_by: "Afghan Translation Service",
-        location: "Berlin"
+        location: "Berlin",
+        category: "Services"
+    },
+    {
+        id: 4,
+        content: {
+            EN: {
+                title: "Learn to Code",
+                description: "On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending smallness it oh ye unwilling. Turned favour man two but lovers. Suffer should if waited common person little oh. Improved civility graceful sex few smallest screened settling. Likely active her warmly has. "
+            },
+            DE: {
+                title: "Probe Post",
+                description: "Auf ihm wiederholt unterschieden sich in erforderlich wanderte . Dann Mädchen ordentlich warum wusste noch Rose Ort. Außerdem Eigenschaft wir er Güte oh größte sein auffallend Lachen. In mir, dass er mit der Sammlung brüskieren Prinzipien Wohnungen. Hat Besucher Gesetz Angriffe behaupten, Sie sind selbst begeistert gemalt rufen. Contented Teilnahme an Kleinheit es oh ihr nicht bereit . Gedreht zugunsten Mann zwei, sondern Liebhaber. Suffer sollte, wenn gemeinsame Person wenig gewartet oh. Verbesserte Zivilität anmutigen Sex paar kleinste gescreent Einschwingzeit . Wahrscheinlich aktiv ihr hat warm."
+            },
+            AR: {
+                title: "آخر عينة",
+                description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
+            }
+        },
+        offered_by: "CoderDojo",
+        location: "Berlin",
+        category: "Skills"
+
+    },
+    {
+        id: 5,
+        content: {
+            EN: {
+                title: "Trip to the Zoo",
+                description: "On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending smallness it oh ye unwilling. Turned favour man two but lovers. Suffer should if waited common person little oh. Improved civility graceful sex few smallest screened settling. Likely active her warmly has. "
+            },
+            DE: {
+                title: "Probe Post",
+                description: "Auf ihm wiederholt unterschieden sich in erforderlich wanderte . Dann Mädchen ordentlich warum wusste noch Rose Ort. Außerdem Eigenschaft wir er Güte oh größte sein auffallend Lachen. In mir, dass er mit der Sammlung brüskieren Prinzipien Wohnungen. Hat Besucher Gesetz Angriffe behaupten, Sie sind selbst begeistert gemalt rufen. Contented Teilnahme an Kleinheit es oh ihr nicht bereit . Gedreht zugunsten Mann zwei, sondern Liebhaber. Suffer sollte, wenn gemeinsame Person wenig gewartet oh. Verbesserte Zivilität anmutigen Sex paar kleinste gescreent Einschwingzeit . Wahrscheinlich aktiv ihr hat warm."
+            },
+            AR: {
+                title: "آخر عينة",
+                description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
+            }
+        },
+        offered_by: "Tierpark Berlin",
+        location: "Berlin",
+        category: "Activities"
     }];
 
     return {
@@ -55,6 +98,30 @@ angular.module('starter.services', [])
         languages: function(postId){
             var post = this.get(postId);
             return Object.keys(post.content);
+        },
+        categoryPosts: function(category){
+            var res = [];
+            for (var i = 0; i < posts.length; i++) {
+              if (posts[i].category === category) {
+                res.push(posts[i]);
+              }
+            }
+            return res;
+        },
+        getCategoryNames: function(){
+            categories = {};
+            posts.forEach(function(post){
+                categories[post.category] = 1;
+            });
+            return Object.keys(categories);
+        },
+        getPostsByCategory: function(){
+            var categories = {};
+            var names = this.getCategoryNames();
+            for (var i = 0; i < names.length; i++) {
+                categories[names[i]] = this.categoryPosts(names[i]);
+            }
+            return categories;
         }
     }
 })

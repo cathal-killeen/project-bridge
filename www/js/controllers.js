@@ -27,7 +27,10 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('HomeCtrl', function($scope, $stateParams) {
+.controller('HomeCtrl', function($scope, $stateParams, Posts) {
+    $scope.categories = Posts.getCategoryNames();
+    $scope.posts = Posts.getPostsByCategory();
+
 })
 .controller('DiscoverCtrl', function($scope, $stateParams, Posts, $location, $state) {
     var posts = Posts.all();
