@@ -81,7 +81,107 @@ angular.module('starter.services', [])
         offered_by: "Tierpark Berlin",
         location: "Berlin",
         category: "Activities"
-    }];
+    },
+    {
+       id: 6,
+       content: {
+           EN: {
+               title: "Learn Guittar",
+               description: "On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending smallness it oh ye unwilling. Turned favour man two but lovers. Suffer should if waited common person little oh. Improved civility graceful sex few smallest screened settling. Likely active her warmly has. "
+           },
+           DE: {
+               title: "Probe Post",
+               description: "Auf ihm wiederholt unterschieden sich in erforderlich wanderte . Dann Mädchen ordentlich warum wusste noch Rose Ort. Außerdem Eigenschaft wir er Güte oh größte sein auffallend Lachen. In mir, dass er mit der Sammlung brüskieren Prinzipien Wohnungen. Hat Besucher Gesetz Angriffe behaupten, Sie sind selbst begeistert gemalt rufen. Contented Teilnahme an Kleinheit es oh ihr nicht bereit . Gedreht zugunsten Mann zwei, sondern Liebhaber. Suffer sollte, wenn gemeinsame Person wenig gewartet oh. Verbesserte Zivilität anmutigen Sex paar kleinste gescreent Einschwingzeit . Wahrscheinlich aktiv ihr hat warm."
+           },
+           AR: {
+               title: "تعلم الغيتار",
+               description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
+           }
+       },
+       offered_by: "Music",
+       location: "Berlin",
+       category: "Skills"
+   },
+     {
+       id: 7,
+       content: {
+           EN: {
+               title: "Learn tennis",
+               description: "On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending smallness it oh ye unwilling. Turned favour man two but lovers. Suffer should if waited common person little oh. Improved civility graceful sex few smallest screened settling. Likely active her warmly has. "
+           },
+           DE: {
+               title: "Erfahren Tennis",
+               description: "Auf ihm wiederholt unterschieden sich in erforderlich wanderte . Dann Mädchen ordentlich warum wusste noch Rose Ort. Außerdem Eigenschaft wir er Güte oh größte sein auffallend Lachen. In mir, dass er mit der Sammlung brüskieren Prinzipien Wohnungen. Hat Besucher Gesetz Angriffe behaupten, Sie sind selbst begeistert gemalt rufen. Contented Teilnahme an Kleinheit es oh ihr nicht bereit . Gedreht zugunsten Mann zwei, sondern Liebhaber. Suffer sollte, wenn gemeinsame Person wenig gewartet oh. Verbesserte Zivilität anmutigen Sex paar kleinste gescreent Einschwingzeit . Wahrscheinlich aktiv ihr hat warm."
+           },
+           AR: {
+               title: "تعلم التنس",
+               description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
+           }
+       },
+       offered_by: "TennisWorld",
+       location: "Berlin-Mitte",
+       category: "Activities"
+   },
+     {
+       id: 8,
+       content: {
+           EN: {
+               title: "Learn basic statistics",
+               description: "On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending smallness it oh ye unwilling. Turned favour man two but lovers. Suffer should if waited common person little oh. Improved civility graceful sex few smallest screened settling. Likely active her warmly has. "
+           },
+           DE: {
+               title: "statistische Grund",
+               description: "Auf ihm wiederholt unterschieden sich in erforderlich wanderte . Dann Mädchen ordentlich warum wusste noch Rose Ort. Außerdem Eigenschaft wir er Güte oh größte sein auffallend Lachen. In mir, dass er mit der Sammlung brüskieren Prinzipien Wohnungen. Hat Besucher Gesetz Angriffe behaupten, Sie sind selbst begeistert gemalt rufen. Contented Teilnahme an Kleinheit es oh ihr nicht bereit . Gedreht zugunsten Mann zwei, sondern Liebhaber. Suffer sollte, wenn gemeinsame Person wenig gewartet oh. Verbesserte Zivilität anmutigen Sex paar kleinste gescreent Einschwingzeit . Wahrscheinlich aktiv ihr hat warm."
+           },
+           AR: {
+               title: "الإحصائية الأساسية",
+               description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
+           }
+       },
+       offered_by: "David",
+       location: "Charlotenbourg",
+       category: "Skills"
+   },
+     {
+       id: 9,
+       content: {
+           EN: {
+               title: "English Class",
+               description: "On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending smallness it oh ye unwilling. Turned favour man two but lovers. Suffer should if waited common person little oh. Improved civility graceful sex few smallest screened settling. Likely active her warmly has. "
+           },
+           DE: {
+               title: "Englischklasse",
+               description: "Auf ihm wiederholt unterschieden sich in erforderlich wanderte . Dann Mädchen ordentlich warum wusste noch Rose Ort. Außerdem Eigenschaft wir er Güte oh größte sein auffallend Lachen. In mir, dass er mit der Sammlung brüskieren Prinzipien Wohnungen. Hat Besucher Gesetz Angriffe behaupten, Sie sind selbst begeistert gemalt rufen. Contented Teilnahme an Kleinheit es oh ihr nicht bereit . Gedreht zugunsten Mann zwei, sondern Liebhaber. Suffer sollte, wenn gemeinsame Person wenig gewartet oh. Verbesserte Zivilität anmutigen Sex paar kleinste gescreent Einschwingzeit . Wahrscheinlich aktiv ihr hat warm."
+           },
+           AR: {
+               title: "تعلم الغيتار",
+               description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
+           }
+       },
+       offered_by: "Jonh",
+       location: "Berlin",
+       category: "Skills"
+   },
+ {
+       id: 10,
+       content: {
+           EN: {
+               title: "Trip to national museum",
+               description: "On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending smallness it oh ye unwilling. Turned favour man two but lovers. Suffer should if waited common person little oh. Improved civility graceful sex few smallest screened settling. Likely active her warmly has. "
+           },
+           DE: {
+               title: "Reise nach Nationalmuseum ",
+               description: "Auf ihm wiederholt unterschieden sich in erforderlich wanderte . Dann Mädchen ordentlich warum wusste noch Rose Ort. Außerdem Eigenschaft wir er Güte oh größte sein auffallend Lachen. In mir, dass er mit der Sammlung brüskieren Prinzipien Wohnungen. Hat Besucher Gesetz Angriffe behaupten, Sie sind selbst begeistert gemalt rufen. Contented Teilnahme an Kleinheit es oh ihr nicht bereit . Gedreht zugunsten Mann zwei, sondern Liebhaber. Suffer sollte, wenn gemeinsame Person wenig gewartet oh. Verbesserte Zivilität anmutigen Sex paar kleinste gescreent Einschwingzeit . Wahrscheinlich aktiv ihr hat warm."
+           },
+           AR: {
+               title: "تعلم التنس",
+               description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
+           }
+       },
+       offered_by: "Allan",
+       location: "Kreuzberg",
+       category: "Activities"
+   }];
 
     return {
         all: function() {
@@ -113,6 +213,7 @@ angular.module('starter.services', [])
             posts.forEach(function(post){
                 categories[post.category] = 1;
             });
+            console.log(categories);
             return Object.keys(categories);
         },
         getPostsByCategory: function(){
@@ -121,6 +222,7 @@ angular.module('starter.services', [])
             for (var i = 0; i < names.length; i++) {
                 categories[names[i]] = this.categoryPosts(names[i]);
             }
+            console.log(categories);
             return categories;
         }
     }
