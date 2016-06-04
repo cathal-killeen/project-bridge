@@ -1,0 +1,10 @@
+<ion-popover-view>
+    <ion-content>
+        <div class="list">
+            <a class="item item-icon-right" ng-repeat="lang in langs" ng-click="setLang(lang)">
+                {{lang}}
+                <i ng-show="lang === selected" class="icon ion-ios-checkmark-empty"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-popover-view>

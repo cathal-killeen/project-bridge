@@ -3,17 +3,19 @@ angular.module('starter.services', [])
 .factory('Posts', function() {
     var posts = [{
         id: 0,
-        EN: {
-            title: "Sample Post",
-            description: "On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending smallness it oh ye unwilling. Turned favour man two but lovers. Suffer should if waited common person little oh. Improved civility graceful sex few smallest screened settling. Likely active her warmly has. "
-        },
-        DE: {
-            title: "Probe Post",
-            description: "Auf ihm wiederholt unterschieden sich in erforderlich wanderte . Dann Mädchen ordentlich warum wusste noch Rose Ort. Außerdem Eigenschaft wir er Güte oh größte sein auffallend Lachen. In mir, dass er mit der Sammlung brüskieren Prinzipien Wohnungen. Hat Besucher Gesetz Angriffe behaupten, Sie sind selbst begeistert gemalt rufen. Contented Teilnahme an Kleinheit es oh ihr nicht bereit . Gedreht zugunsten Mann zwei, sondern Liebhaber. Suffer sollte, wenn gemeinsame Person wenig gewartet oh. Verbesserte Zivilität anmutigen Sex paar kleinste gescreent Einschwingzeit . Wahrscheinlich aktiv ihr hat warm."
-        },
-        AR: {
-            title: "آخر عينة",
-            description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
+        content: {
+            EN: {
+                title: "Sample Post",
+                description: "On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending smallness it oh ye unwilling. Turned favour man two but lovers. Suffer should if waited common person little oh. Improved civility graceful sex few smallest screened settling. Likely active her warmly has. "
+            },
+            DE: {
+                title: "Probe Post",
+                description: "Auf ihm wiederholt unterschieden sich in erforderlich wanderte . Dann Mädchen ordentlich warum wusste noch Rose Ort. Außerdem Eigenschaft wir er Güte oh größte sein auffallend Lachen. In mir, dass er mit der Sammlung brüskieren Prinzipien Wohnungen. Hat Besucher Gesetz Angriffe behaupten, Sie sind selbst begeistert gemalt rufen. Contented Teilnahme an Kleinheit es oh ihr nicht bereit . Gedreht zugunsten Mann zwei, sondern Liebhaber. Suffer sollte, wenn gemeinsame Person wenig gewartet oh. Verbesserte Zivilität anmutigen Sex paar kleinste gescreent Einschwingzeit . Wahrscheinlich aktiv ihr hat warm."
+            },
+            AR: {
+                title: "آخر عينة",
+                description: "على ذلك اختلفت المتكررة تجولت المطلوبة . ثم أنيق فتاة لماذا لم يعرف بقعة ردة. وعلاوة على ذلك الممتلكات التي كان اللطف أعظم أن تكون ملفتة للنظر يا الضحك . في لي انه في جمع تحدي مشاعر الشقق المبادئ. لديه هجمات القانون الزوار تدعي أنت تدعو تلقاء متحمس رسمها. قانع صغر حضوره يا أيها راغبة . تحولت صالح رجلين لكن عشاق . تعاني ينبغي إذا انتظر الشخص العادي قليلا اه. تحسين الكياسة الجنس رشيقة قليلة أصغر تسوية فحص . نشط المرجح لها ديه بحرارة."
+            }
         }
     }];
 
@@ -28,6 +30,10 @@ angular.module('starter.services', [])
               }
             }
             return null;
+        },
+        languages: function(postId){
+            var post = this.get(postId);
+            return Object.keys(post.content);
         }
     }
 })

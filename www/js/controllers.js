@@ -35,7 +35,44 @@ angular.module('starter.controllers', [])
 })
 .controller('SettingsCtrl', function($scope, $stateParams) {
 })
-.controller('PostDetailCtrl', function($scope, $stateParams, Posts) {
+.controller('PostDetailCtrl', function($scope, $stateParams, Posts, $ionicPopover) {
     var post = Posts.get($stateParams.postId);
-    $scope.content = post.EN;
+    $scope.content = post.content.EN;
+
+    $scope.selected = 'EN';
+
+    $scope.langs = Posts.languages($stateParams.postId);
+
+    console.log($scope.langs);
+
+    $scope.setLang = function(newLang) {
+        $scope.selected = newLang;
+        $scope.closePopover();
+        $scope.content = post.content[$scope.selected];
+    }
+
+    $ionicPopover.fromTemplateUrl('templates/language-popover.html', {
+        scope: $scope
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+
+    $scope.openPopover = function($event) {
+        $scope.popover.show($event);
+    };
+    $scope.closePopover = function() {
+        $scope.popover.hide();
+    };
+    //Cleanup the popover when we're done with it!
+    $scope.$on('$destroy', function() {
+        $scope.popover.remove();
+    });
+    // Execute action on hide popover
+    $scope.$on('popover.hidden', function() {
+        // Execute action
+    });
+    // Execute action on remove popover
+    $scope.$on('popover.removed', function() {
+        // Execute action
+    });
 });
